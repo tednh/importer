@@ -157,6 +157,11 @@ class Plugin
 			return ;
 		}
 
+		/* Does the field already exist? */
+		if ( isset( WPAS()->custom_fields->get_custom_fields()[ 'help_desk_ticket_id' ] ) ) {
+			return ;
+		}
+
         // Note: Awesome Support automatically adds a `_wpas_` prefix to this custom field name.
         wpas_add_custom_field('help_desk_ticket_id', [
             'title'        => __('Help Desk SaaS Ticket ID', 'awesome-support-importer'),

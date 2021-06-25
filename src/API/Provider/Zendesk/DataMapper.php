@@ -153,7 +153,7 @@ class DataMapper extends AbstractDataMapper
                 $data['ticketId'],
                 $data['requesterId'] ?: $data['updaterId'],
                 $this->getHistoryStatus($event->status),
-                $data['date'], 
+                $data['date'],
                 $data['id']
             );
 
@@ -185,7 +185,7 @@ class DataMapper extends AbstractDataMapper
                 'timestamp' => $data['date'],
                 'private'   => false
             ];
-            
+
             if (isset($comment->public) && !$comment->public) {
                 $data['reply']['private'] = true;
             }

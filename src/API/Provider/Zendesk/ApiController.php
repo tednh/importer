@@ -88,7 +88,7 @@ class ApiController extends ProviderController
         );
 
         $packet = $this->get($url);
-        
+
         $this->dataMapper->mapJSON($packet, 'comments', $ticketId);
     }
     /**

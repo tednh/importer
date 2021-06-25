@@ -295,7 +295,7 @@ class Importer implements ImporterInterface
             $historyId = $this->locator->findHistoryByHelpDeskId($history['id']);
             if ($this->validator->isValidHistoryId($historyId)) {
                 continue;
-            } 
+            }
 
             $author = $this->processUser($history['user']);
 

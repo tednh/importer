@@ -184,7 +184,7 @@ class Inserter
             ]
         );
     }
-    
+
     /**
      * Upload and insert the attachment into the database.
      *
@@ -285,7 +285,7 @@ class Inserter
             ]
         );
     }
-    
+
     /**
      * Set the Help Desk's Reply as a private note in the post database table.
      *
@@ -304,7 +304,7 @@ class Inserter
             ]
         );
     }
-    
+
     /**
      * Insert/Update History Item into the database.
      *
