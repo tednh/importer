@@ -71,7 +71,7 @@ When it's done, you'll get a report back of how many tickets and replies were pr
 
 ### Help Scout
 
-![Help Scout Importer Screen](assets/images/helpscout-ui.jpg)
+![Help Scout Importer Screen](assets/images/helpscout-ui.png)
 
 Help Scout requires an API Token, which you register within your Help Scout dashboard.  To get your API Key (token), do the following:
 
@@ -82,12 +82,12 @@ Help Scout requires an API Token, which you register within your Help Scout dash
 5. Then click on the "Generate an API Key" button. Give your new key a label.
 
 Now follow these steps to import your tickets:
-1. Copy the API Key and then paste it into the Importer's "Help Desk's API Token" field in your WordPress dashboard.
-2. You will need to select which mailbox from which to import the tickets.  Click on the "Get Help Scout Mailboxes" button.  The plugin requests all of the mailboxes from your Help Scout account and then populates the "Select the Mailbox to import" `<select>` field.  You will receive a message when the mailboxes are populated and the request is complete.
-3. When it's done, then select a mailbox.
-4. If you'd like to get tickets within a certain date range, select that range in the date fields.
-5. Click the "Save" button. The information you entered is saved.
-6. Click on the "Import Tickets" button.
+1. Enter the App ID, App Secret first.
+2. Then click on the "Save" button.
+3. Copy the url given to Redirection URL App.
+4. Then click on the "Get Authorize" button.
+5. Enter the API Token from Get Authorize page.
+6. Then click on the "Get Mailboxes" button.
 7. Stay on this page. Please be patient, as it can take awhile.  Take a break while it does its work.
 
 ### Zendesk
@@ -134,3 +134,14 @@ Follow these steps to import your tickets:
 4. Click the "Save" button. The information you entered is saved.
 5. Click on the "Import Tickets" button.
 6. Stay on this page. Please be patient, as it can take awhile.  Take a break while it does its work.
+
+### Importing a large volume of tickets
+When importing a large volume of tickets you will want to make sure that your WordPress configuration and PHP configuration files are set up to use a larger amount of memory and to allow script execution to run longer.  If you are using a third party host you might need to speak with them to get your memory and execution times temporarily lifted.
+If you do have control over your own server, two settings to temporarily change would be the following:
+
+* memory_limit = -1
+* max_execution_time = 0
+
+This effectively allows PHP to use all available memory and to run as long as necessary
+
+Note that you might have to change WordPress memory limits as well in your wp-config.php file!
