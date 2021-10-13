@@ -197,7 +197,7 @@ window.awesomeSupportImporter = window.awesomeSupportImporter || {
      * @private
      */
     var _isReadyForImport = function(selectedApi) {
-        if ($('.notice-error').length > 0) {
+        if ($('.notice-error.as-importer').length > 0) {
             return false;
         }
 

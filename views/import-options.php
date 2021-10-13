@@ -7,7 +7,7 @@
     <?php endif; ?>
 
     <?php if (!$this->hasValidDateRange()) : ?>
-        <div class="notice notice-error">
+        <div class="notice notice-error as-importer">
             <p><?php _e('Your start date is after your end date.', 'awesome-support-importer'); ?></p>
         </div>
     <?php endif; ?>
